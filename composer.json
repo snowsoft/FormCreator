@@ -1,5 +1,5 @@
 {
-  "name": "Snowsoft/FormBuilder",
+  "name": "Snowsoft/FormCreator",
   "description": "Php Form Builder",
   "license": "MIT",
   "authors": [
@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-0": {
-      "Snowsoft\\FormBuilder": "src/"
+      "Snowsoft\\FormCreator": "src/"
     },
     "files": [
       "src/helpers.php"
