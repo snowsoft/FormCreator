@@ -2,6 +2,11 @@
   "name": "snowsoft/form-creator",
   "description": "Php Form Builder",
   "license": "MIT",
+  "keywords": [
+    "form",
+    "Formbuild",
+    "formcreate"
+  ],
   "type" :"library",
   "homepage": "https://github.com/snowsoft/form-creator",
   "authors": [
