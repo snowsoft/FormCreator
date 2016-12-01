@@ -15,17 +15,17 @@ class Input
 {
 
 
-    public function __call($meth, $args)
+    public function text($name, $options)
     {
+        $options['name'] = $name;
+        $options['type'] = 'text';
+        return Load::inc('text', $options);
+    }
 
-        if ($meth)
-            switch ($meth):
-                case 'text':
-                    return Load::inc('text', $args[0]);
-                    break;
-
-            endswitch;
-
+    public function url($name, $options)
+    {
+        $options['name'] = $name;
+        return Load::inc('url', $options);
     }
 
 
