@@ -28,6 +28,6 @@
       "src/helpers.php"
     ]
   },
-  "minimum-stability": "dev-master",
+  "minimum-stability": "master",
   "prefer-stable": true
 }
