@@ -14,6 +14,14 @@ class FormParser
 
     public function __construct($form)
     {
-        return $form;
+        return $this->parse($form);
+    }
+
+
+    protected function parse($form)
+    {
+        var_dump($form['elements']);
+
+
     }
 }
