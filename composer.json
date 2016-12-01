@@ -18,11 +18,7 @@
     "phpunit/phpunit": "~4.0",
     "orchestra/testbench": "~3.0"
   },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.6.x-dev"
-    }
-  },
+
   "autoload": {
     "psr-0": {
       "FormCreator": "src/Snowsoft"
