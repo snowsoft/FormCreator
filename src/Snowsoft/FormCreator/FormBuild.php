@@ -28,18 +28,65 @@ class FormBuild
     }
 
 
-
     /**
      *
      * @param  string  $name
-     * @param  Array  $options
+     * @param  array $options
      * @return FormBuild;
      */
 
-    public  function input($name,$options = array())
+    public function button($name, $options = array())
     {
         $this->element = $name;
-        $this->fields[$name]['type'] = 'input';
+        $this->fields[$name]['type'] = 'button';
+        $this->fields[$name] = $options;
+        return $this;
+
+    }
+
+    /**
+     *
+     * @param  string $name
+     * @param  array $options
+     * @return FormBuild;
+     */
+
+    public function checkbox($name, $options = array())
+    {
+        $this->element = $name;
+        $this->fields[$name]['type'] = 'checkbox';
+        $this->fields[$name] = $options;
+        return $this;
+
+    }
+
+    /**
+     *
+     * @param  string $name
+     * @param  array $options
+     * @return FormBuild;
+     */
+
+    public function color($name, $options = array())
+    {
+        $this->element = $name;
+        $this->fields[$name]['type'] = 'color';
+        $this->fields[$name] = $options;
+        return $this;
+
+    }
+
+    /**
+     *
+     * @param  string $name
+     * @param  array $options
+     * @return FormBuild;
+     */
+
+    public function dateTime($name, $options = array())
+    {
+        $this->element = $name;
+        $this->fields[$name]['type'] = 'datetime';
         $this->fields[$name] = $options;
         return $this;
 
@@ -48,7 +95,7 @@ class FormBuild
     /**
      *
      * @param  string  $name
-     * @param  Array  $options
+     * @param  array $options
      * @return FormBuild;
      */
 
@@ -63,8 +110,27 @@ class FormBuild
 
     /**
      *
+     * @param  string $name
+     * @param  array $options
+     * @param  boolean $multiple
+     * @return FormBuild;
+     */
+
+    public function file($name, $options = array(), $multiple = false)
+    {
+        $this->element = $name;
+        $this->fields[$name]['type'] = 'file';
+        $this->fields[$name]['multiple'] = $multiple;
+        $this->fields[$name] = $options;
+        return $this;
+
+    }
+
+
+    /**
+     *
      * @param  string  $name
-     * @param  Array  $options
+     * @param  array $options
      * @return FormBuild;
      */
 
@@ -80,7 +146,7 @@ class FormBuild
     /**
      *
      * @param  string  $name
-     * @param  Array  $options
+     * @param  array $options
      * @return FormBuild;
      */
 
