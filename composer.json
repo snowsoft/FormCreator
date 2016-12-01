@@ -2,6 +2,8 @@
   "name": "snowsoft/form-creator",
   "description": "Php Form Builder",
   "license": "MIT",
+  "type" :"library",
+  "homepage": "https://github.com/snowsoft/form-creator",
   "authors": [
     {
       "name": "Abdulkadir KAR",
@@ -13,9 +15,10 @@
   },
 
   "autoload": {
-    "psr-0": {
-      "Snowsoft\\FormCreator": "src/"
+    "psr-4": {
+      "Snowsoft\\FormCreator": "src/Snowsoft"
     },
+
     "files": [
       "src/helpers.php"
     ]
