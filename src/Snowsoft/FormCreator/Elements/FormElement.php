@@ -8,13 +8,15 @@
 
 namespace Snowsoft\FormCreator\Elements;
 
+use Snowsoft\FormCreator\Load;
 
 class FormElement
 {
 
     public function FormOpen($formName, $options = array())
     {
-        return Load::inc($formName, $options);
+        $options['name'] = $formName;
+        return Load::inc('formOpen', $options);
     }
 
     public function formClose()

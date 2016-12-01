@@ -16,11 +16,12 @@ class Load
 
     public static function inc($file, $data = null)
     {
+        $filepath = self::$folder . $file . '.php';
 
-        if ($file and file_exists(self::$folder . $file)):
+        if ($file and file_exists($filepath)):
             ob_start();
             if ($data) extract($data);
-            include(self::$folder . $file);
+            include($filepath);
             return ob_get_clean();
         else:
             return null;

@@ -8,6 +8,9 @@
 
 namespace Snowsoft\FormCreator;
 
+use Snowsoft\FormCreator\Elements\FormElement;
+use Snowsoft\FormCreator\Elements\Input;
+
 
 class FormParser
 {
@@ -20,7 +23,40 @@ class FormParser
 
     protected function parse($form)
     {
-        var_dump($form['elements']);
+        $input = new Input();
+        $formElement = new FormElement();
+
+        $html = $formElement->FormOpen($form['formName'], $form['formRules']);
+
+        if (is_array($form['elements']))
+            foreach ($form['elements'] as $name => $options):
+
+                if (isset($options['type']) and $options['type']):
+
+                    switch ($options['type']):
+                        case 'text':
+                            $html .= $input->text($name, $options);
+                            break;
+                        case 'url':
+                            $html .= $input->url($name, $options);
+                            break;
+                        case 'date':
+                            $html .= $input->date($name, $options);
+                            break;
+
+                    endswitch;
+
+
+                endif;
+
+
+            endforeach;
+
+
+        $html .= $formElement->formClose();
+
+
+        return $html;
 
 
     }

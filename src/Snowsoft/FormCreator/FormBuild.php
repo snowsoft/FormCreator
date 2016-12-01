@@ -18,7 +18,9 @@ class FormBuild
 
     protected  $formName;
 
-    public function __construct($formName,\Closure $callback = null)
+    protected $formRules;
+
+    public function __construct($formName, $formRules = array(), \Closure $callback = null)
     {
 
         $this->formName  = $formName;
@@ -162,7 +164,7 @@ class FormBuild
 
     public function __destruct()
     {
-        return new FormParser(['formName'=>$this->formName,'elements'=>$this->fields]);
+        return new FormParser(['formName' => $this->formName, 'formRules' => $this->formRules, 'elements' => $this->fields]);
     }
 
 

@@ -19,14 +19,19 @@ class Input
     {
         $options['name'] = $name;
         $options['type'] = 'text';
-        return Load::inc('text', $options);
+        return Load::inc('input/text', $options);
     }
 
     public function url($name, $options)
     {
         $options['name'] = $name;
-        return Load::inc('url', $options);
+        return Load::inc('input/text', $options);
     }
 
+    public function date($name, $options)
+    {
+        $options['name'] = $name;
+        return Load::inc('input/text', $options);
+    }
 
 }
