@@ -21,7 +21,7 @@
 
   "autoload": {
     "psr-0": {
-      "FormCreator": "src/Snowsoft"
+      "Snowsoft\\FormCreator": "src/"
     },
 
     "files": [
