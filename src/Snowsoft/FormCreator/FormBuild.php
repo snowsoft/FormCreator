@@ -39,7 +39,7 @@ class FormBuild
     {
         $this->element = $name;
         $this->fields[$name]['type'] = 'button';
-        $this->fields[$name] = $options;
+        $this->fields[$name]['options'] = $options;
         return $this;
 
     }
@@ -55,7 +55,7 @@ class FormBuild
     {
         $this->element = $name;
         $this->fields[$name]['type'] = 'checkbox';
-        $this->fields[$name] = $options;
+        $this->fields[$name]['options'] = $options;
         return $this;
 
     }
@@ -71,7 +71,7 @@ class FormBuild
     {
         $this->element = $name;
         $this->fields[$name]['type'] = 'color';
-        $this->fields[$name] = $options;
+        $this->fields[$name]['options'] = $options;
         return $this;
 
     }
@@ -87,7 +87,7 @@ class FormBuild
     {
         $this->element = $name;
         $this->fields[$name]['type'] = 'datetime';
-        $this->fields[$name] = $options;
+        $this->fields[$name]['options'] = $options;
         return $this;
 
     }
@@ -103,7 +103,7 @@ class FormBuild
     {
         $this->element = $name;
         $this->fields[$name]['type'] = 'text';
-        $this->fields[$name] = $options;
+        $this->fields[$name]['options'] = $options;
         return $this;
 
     }
@@ -121,7 +121,7 @@ class FormBuild
         $this->element = $name;
         $this->fields[$name]['type'] = 'file';
         $this->fields[$name]['multiple'] = $multiple;
-        $this->fields[$name] = $options;
+        $this->fields[$name]['options'] = $options;
         return $this;
 
     }
@@ -138,7 +138,7 @@ class FormBuild
     {
         $this->element = $name;
         $this->fields[$name]['type'] = 'url';
-        $this->fields[$name] = $options;
+        $this->fields[$name]['options'] = $options;
         return $this;
 
     }
@@ -154,7 +154,7 @@ class FormBuild
     {
         $this->element = $name;
         $this->fields[$name]['type'] = 'date';
-        $this->fields[$name] = $options;
+        $this->fields[$name]['options'] = $options;
         return $this;
 
     }
@@ -164,9 +164,6 @@ class FormBuild
     {
         return new FormParser(['formName'=>$this->formName,'elements'=>$this->fields]);
     }
-
-
-
 
 
 }
