@@ -12,6 +12,9 @@ namespace Snowsoft\FormCreator;
 class Form
 {
 
+    public static $DefaultLang = 'TR';
+
+
     public static function Create($formName,$columns)
     {
         return new FormBuild($formName,$columns);

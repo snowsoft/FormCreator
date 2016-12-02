@@ -9,7 +9,7 @@
 namespace Snowsoft\FormCreator\Elements;
 
 
-use Snowsoft\FormCreator\Load;
+use Snowsoft\FormCreator\FormLoader;
 
 class Input
 {
@@ -19,19 +19,19 @@ class Input
     {
         $options['name'] = $name;
         $options['type'] = 'text';
-        return Load::inc('input/text', $options);
+        return FormLoader::inc('input/text', $options);
     }
 
     public function url($name, $options)
     {
         $options['name'] = $name;
-        return Load::inc('input/text', $options);
+        return FormLoader::inc('input/text', $options);
     }
 
     public function date($name, $options)
     {
         $options['name'] = $name;
-        return Load::inc('input/text', $options);
+        return FormLoader::inc('input/text', $options);
     }
 
 }

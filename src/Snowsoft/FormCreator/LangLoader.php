@@ -9,14 +9,16 @@
 namespace Snowsoft\FormCreator;
 
 
-class Load
+class FormLoader
 {
 
     public static $folder = __DIR__ . '/View/';
 
+    public static $fileExt = '.php';
+
     public static function inc($file, $data = null)
     {
-        $filepath = self::$folder . $file . '.php';
+        $filepath = self::$folder . $file . self::$fileExt;
 
         if ($file and file_exists($filepath)):
             ob_start();
