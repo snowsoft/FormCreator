@@ -36,4 +36,25 @@ class Input
         return FormLoader::inc('input/text', $options);
     }
 
+    public function tel($name, $options)
+    {
+        $options['name'] = $name;
+        $options['type'] = 'tel';
+        return FormLoader::inc('input/text', $options);
+    }
+
+    public function hidden($name, $options)
+    {
+        $options['name'] = $name;
+        $options['type'] = 'hidden';
+        return FormLoader::inc('input/text', $options);
+    }
+
+    public function time($name, $options)
+    {
+        $options['name'] = $name;
+        $options['type'] = 'time';
+        return FormLoader::inc('input/text', $options);
+    }
+
 }

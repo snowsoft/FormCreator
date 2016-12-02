@@ -44,8 +44,18 @@ class FormParser
                         case 'date':
                             $html .= $input->date($name, $options['options']);
                             break;
+                        case 'tel':
+                            $html .= $input->tel($name, $options['options']);
+                            break;
+                        case 'hidden':
+                            $html .= $input->hidden($name, $options['options']);
+                            break;
+                        case 'time':
+                            $html .= $input->time($name, $options['options']);
+                            break;
 
-                    endswitch;
+
+                            endswitch;
 
 
                 endif;
