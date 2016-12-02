@@ -123,7 +123,6 @@ class FormBuild
 
     }
 
-
     /**
      *
      * @param  string  $name
@@ -155,6 +154,55 @@ class FormBuild
         return $this;
 
     }
+
+    /**
+     *
+     * @param  string $name
+     * @param  array $options
+     * @return FormParser;
+     */
+
+    public function time($name, $options = array())
+    {
+        $this->element = $name;
+        $this->fields[$name]['type'] = 'time';
+        $this->fields[$name]['options'] = $options;
+        return $this;
+
+    }
+
+    /**
+     *
+     * @param  string $name
+     * @param  array $options
+     * @return FormParser;
+     */
+
+    public function tel($name, $options = array())
+    {
+        $this->element = $name;
+        $this->fields[$name]['type'] = 'tel';
+        $this->fields[$name]['options'] = $options;
+        return $this;
+
+    }
+
+    /**
+     *
+     * @param  string $name
+     * @param  array $options
+     * @return FormParser;
+     */
+
+    public function hidden($name, $options = array())
+    {
+        $this->element = $name;
+        $this->fields[$name]['type'] = 'hidden';
+        $this->fields[$name]['options'] = $options;
+        return $this;
+
+    }
+
 
     public  function __destruct()
     {
