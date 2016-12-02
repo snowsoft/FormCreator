@@ -15,6 +15,16 @@ class Form
     public static $DefaultLang = 'TR';
 
 
+    /**
+     *  Form Creator
+     *
+     * @param  string  $name  // FormName
+     * @param  array $formRules // Form Attributes
+     * @param  function $columns // Form Elements
+     * @return FormBuild;
+     */
+
+
     public static function Create($formName,$formRules=array(),$columns)
     {
         return new FormBuild($formName,$formRules,$columns);

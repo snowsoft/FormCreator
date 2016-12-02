@@ -34,7 +34,7 @@ class FormBuild
      *
      * @param  string  $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function button($name, $options = array())
@@ -50,7 +50,7 @@ class FormBuild
      *
      * @param  string $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function checkbox($name, $options = array())
@@ -66,7 +66,7 @@ class FormBuild
      *
      * @param  string $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function color($name, $options = array())
@@ -82,7 +82,7 @@ class FormBuild
      *
      * @param  string $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function dateTime($name, $options = array())
@@ -98,7 +98,7 @@ class FormBuild
      *
      * @param  string  $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function text($name,$options = array())
@@ -115,7 +115,7 @@ class FormBuild
      * @param  string $name
      * @param  array $options
      * @param  boolean $multiple
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function file($name, $options = array(), $multiple = false)
@@ -133,7 +133,7 @@ class FormBuild
      *
      * @param  string  $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function url($name,$options = array())
@@ -149,7 +149,7 @@ class FormBuild
      *
      * @param  string  $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function date($name,$options = array())
