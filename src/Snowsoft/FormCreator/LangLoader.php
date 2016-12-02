@@ -9,22 +9,21 @@
 namespace Snowsoft\FormCreator;
 
 
-class FormLoader
+class LangLoader
 {
 
-    public static $folder = __DIR__ . '/View/';
+    public static  $lang = 'TR';
+
+    public static $folder = __DIR__ . '/Lang/';
 
     public static $fileExt = '.php';
 
-    public static function inc($file, $data = null)
+    public static function inc($file)
     {
-        $filepath = self::$folder . $file . self::$fileExt;
+        $filepath = self::$folder .self::$lang.'/'. $file . self::$fileExt;
 
         if ($file and file_exists($filepath)):
-            ob_start();
-            if ($data) extract($data);
-            include($filepath);
-            return ob_get_clean();
+            return include($filepath);
         else:
             return null;
         endif;
