@@ -47,7 +47,7 @@ class Input
     {
         $options['name'] = $name;
         $options['type'] = 'hidden';
-        return FormLoader::inc('input/text', $options);
+        return FormLoader::inc('input/hidden', $options);
     }
 
     public function time($name, $options)
