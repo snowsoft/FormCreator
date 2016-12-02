@@ -1,4 +1,4 @@
-<div class="form-group <?= ((isset($name)) ? $name : null) ?>">
+<div class="form-group">
     <? if (isset($label) and $label): ?>
         <label for="<?= ((isset($name)) ? $name : null) ?>"><?= ((isset($label)) ? $label : null) ?></label>
     <? endif; ?>
