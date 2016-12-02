@@ -2,11 +2,11 @@
     <? if (isset($label) and $label): ?>
         <label for="<?= ((isset($name)) ? $name : null) ?>"><?= ((isset($label)) ? $label : null) ?></label>
     <? endif; ?>
-    <input type=" <?= ((isset($type)) ? $type : 'type') ?>"
+    <input type="<?= ((isset($type)) ? $type : 'text') ?>"
            class="form-control <?= ((isset($class)) ? $class : null) ?>"
            name="<?= ((isset($name)) ? $name : null) ?>"
            id="<?= ((isset($id)) ? $id : ((isset($name)) ? $name : null)) ?>"
-           placeholder="<?= ((isset($placeholder)) ? $placeholder : null) ?>"
+        <?= ((isset($placeholder)) ? ' placeholder="' . $placeholder . '"' : null) ?>
         <?= ((isset($required)) ? 'required' : null) ?>
         <?php
         if (isset($rules) and $rules):

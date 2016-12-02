@@ -18,7 +18,7 @@ class FormParser
     public function __construct($form)
     {
 
-      return $this->parse($form);
+      echo  $this->parse($form);
     }
 
 
@@ -36,13 +36,13 @@ class FormParser
 
                     switch ($options['type']):
                         case 'text':
-                            $html .= $input->text($name, $options);
+                            $html .= $input->text($name, $options['options']);
                             break;
                         case 'url':
-                            $html .= $input->url($name, $options);
+                            $html .= $input->url($name, $options['options']);
                             break;
                         case 'date':
-                            $html .= $input->date($name, $options);
+                            $html .= $input->date($name, $options['options']);
                             break;
 
                     endswitch;
@@ -57,7 +57,7 @@ class FormParser
         $html .= $formElement->formClose();
 
 
-        echo $html;
+        return $html;
 
 
 

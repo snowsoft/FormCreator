@@ -25,12 +25,14 @@ class Input
     public function url($name, $options)
     {
         $options['name'] = $name;
+        $options['type'] = 'url';
         return FormLoader::inc('input/text', $options);
     }
 
     public function date($name, $options)
     {
         $options['name'] = $name;
+        $options['type'] = 'date';
         return FormLoader::inc('input/text', $options);
     }
 
