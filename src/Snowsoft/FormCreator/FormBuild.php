@@ -12,11 +12,11 @@ namespace Snowsoft\FormCreator;
 class FormBuild
 {
 
-    protected  $fields = array();
+    protected $fields = array();
 
     protected $element;
 
-    protected  $formName;
+    protected $formName;
 
     protected $formRules;
 
@@ -24,17 +24,17 @@ class FormBuild
     {
 
         $this->formName  = $formName;
-        if( !is_null($callback))
+        $this->formRules  = $formRules;
+        if(!is_null($callback))
             $callback($this);
-
-    }
+        }
 
 
     /**
      *
      * @param  string  $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function button($name, $options = array())
@@ -42,15 +42,13 @@ class FormBuild
         $this->element = $name;
         $this->fields[$name]['type'] = 'button';
         $this->fields[$name]['options'] = $options;
-        return $this;
-
     }
 
     /**
      *
      * @param  string $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function checkbox($name, $options = array())
@@ -58,15 +56,13 @@ class FormBuild
         $this->element = $name;
         $this->fields[$name]['type'] = 'checkbox';
         $this->fields[$name]['options'] = $options;
-        return $this;
-
     }
 
     /**
      *
      * @param  string $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function color($name, $options = array())
@@ -74,7 +70,6 @@ class FormBuild
         $this->element = $name;
         $this->fields[$name]['type'] = 'color';
         $this->fields[$name]['options'] = $options;
-        return $this;
 
     }
 
@@ -82,7 +77,7 @@ class FormBuild
      *
      * @param  string $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function dateTime($name, $options = array())
@@ -98,7 +93,7 @@ class FormBuild
      *
      * @param  string  $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function text($name,$options = array())
@@ -115,7 +110,7 @@ class FormBuild
      * @param  string $name
      * @param  array $options
      * @param  boolean $multiple
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function file($name, $options = array(), $multiple = false)
@@ -133,7 +128,7 @@ class FormBuild
      *
      * @param  string  $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function url($name,$options = array())
@@ -149,7 +144,7 @@ class FormBuild
      *
      * @param  string  $name
      * @param  array $options
-     * @return FormBuild;
+     * @return FormParser;
      */
 
     public function date($name,$options = array())
@@ -161,10 +156,19 @@ class FormBuild
 
     }
 
-
-    public function __destruct()
+    public  function __destruct()
     {
-        return new FormParser(['formName' => $this->formName, 'formRules' => $this->formRules, 'elements' => $this->fields]);
+        return new FormParser(
+            [
+            'formName' => $this->formName,
+            'formRules' => $this->formRules,
+            'elements' => $this->fields
+            ]);
+    }
+
+    public function string()
+    {
+
     }
 
 

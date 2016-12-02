@@ -17,7 +17,8 @@ class FormParser
 
     public function __construct($form)
     {
-        return $this->parse($form);
+
+      return $this->parse($form);
     }
 
 
@@ -56,7 +57,9 @@ class FormParser
         $html .= $formElement->formClose();
 
 
-        return $html;
+        echo $html;
+
+
 
 
     }
