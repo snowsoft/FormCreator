@@ -15,9 +15,9 @@ class Form
     public static $DefaultLang = 'TR';
 
 
-    public static function Create($formName,$columns)
+    public static function Create($formName,$formRules=array(),$columns)
     {
-        return new FormBuild($formName,$columns);
+        return new FormBuild($formName,$formRules,$columns);
     }
 
 
