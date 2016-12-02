@@ -9,7 +9,7 @@
 namespace Snowsoft\FormCreator;
 
 
-class FormLoad
+class FormLoader
 {
 
     public static $folder = __DIR__ . '/View/';
