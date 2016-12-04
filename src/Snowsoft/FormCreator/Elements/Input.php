@@ -13,7 +13,7 @@ use Snowsoft\FormCreator\FormLoader;
 class Input
 {
 
-    public $LabelClass = 'col-lg-3';
+    public $labelClass = 'col-lg-3';
     public $inputClass = 'col-lg-9';
 
 
