@@ -1,6 +1,6 @@
-<form class="form-control <?= ((isset($class)) ? $class : null) ?>"
+<form class="<?= ((isset($class)) ? $class : null) ?>"
         <?= ((isset($name)) ? 'name="'.$name.'"' : null) ?> id="<?= ((isset($id)) ? $id : ((isset($name)) ? $name : null)) ?>"
-        method="<?= ((isset($method)) ? $method : 'post') ?>" <?= ((isset($action)) ? 'action="'.$action.'"' : '') ?><?= ((isset($enctype)) ? 'enctype="'.$enctype.'"' :null) ?><?
+      method="<?= ((isset($method)) ? $method : 'post') ?>" <?= ((isset($action)) ? 'action="' . $action . '"' : '') ?><?= ((isset($enctype)) ? 'enctype="' . $enctype . '"' : null) ?><?
         if (isset($rules) and $rules):
         $rule = explode('|',$rules);
         if(is_array($rule) and count($rule)>0)
