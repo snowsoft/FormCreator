@@ -50,6 +50,12 @@ class FormParser
                         case 'hidden':
                             $html .= $input->hidden($name, $options['options']);
                             break;
+                        case 'color':
+                            $html .= $input->color($name, $options['options']);
+                            break;
+                        case 'datetime':
+                            $html .= $input->datetime($name, $options['options']);
+                            break;
                         case 'time':
                             $html .= $input->time($name, $options['options']);
                             break;
