@@ -111,7 +111,7 @@ class Input
     public function label($data)
     {
         $data['labelClass'] = $this->labelClass;
-        return FormLoader::inc('input/file', $data);
+        return FormLoader::inc('input/label', $data);
     }
 
 

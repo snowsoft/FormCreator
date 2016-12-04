@@ -1,5 +1,5 @@
 <div class="form-group">
-    <?php echo (isset($labelText) & $labelText) ? $labelText:null ?>
+    <?php echo (isset($labelText) and $labelText) ? $labelText : null ?>
     <div class="<?= ((isset($inputClass)) ? $inputClass : null) ?>">
         <input type="file"
                class="form-control <?= ((isset($class)) ? $class : null) ?>"
@@ -23,3 +23,4 @@
         <? endif; ?>
     </div>
 </div>
+<br clear="all">

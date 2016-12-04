@@ -53,6 +53,9 @@ class FormParser
                         case 'time':
                             $html .= $input->time($name, $options['options']);
                             break;
+                        case 'file':
+                            $html .= $input->file($name, $options['options']);
+                            break;
 
 
                             endswitch;
