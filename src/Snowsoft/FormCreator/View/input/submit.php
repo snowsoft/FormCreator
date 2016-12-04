@@ -18,9 +18,7 @@
                     endforeach;
             endif;
             ?>>
-        <? if (isset($help) and $help): ?>
-            <div class="helper"><?= $help ?></div>
-        <? endif; ?>
+
     </div>
 </div>
 <br clear="all">

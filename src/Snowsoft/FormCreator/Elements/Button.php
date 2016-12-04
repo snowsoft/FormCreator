@@ -15,7 +15,7 @@ class Button
 
     public function Submit($options)
     {
-        $options['inputClass'] = 'col-lg-12';
+        $options['inputClass'] = 'col-lg-2';
         $options['type'] = 'submit';
         return FormLoader::inc('input/submit', $options);
     }

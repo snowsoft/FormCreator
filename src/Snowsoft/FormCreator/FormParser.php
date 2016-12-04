@@ -75,7 +75,7 @@ class FormParser
             endforeach;
 
 
-        $html .= $button->Submit($form['formRules']);
+        $html .= $button->Submit((isset($form['formRules']['submit']) ? $form['formRules']['submit'] : null));
         $html .= $formElement->formClose();
 
 
