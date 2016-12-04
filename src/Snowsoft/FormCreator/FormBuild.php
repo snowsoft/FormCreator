@@ -42,6 +42,8 @@ class FormBuild
         $this->element = $name;
         $this->fields[$name]['type'] = 'button';
         $this->fields[$name]['options'] = $options;
+        return $this;
+
     }
 
     /**
@@ -56,6 +58,8 @@ class FormBuild
         $this->element = $name;
         $this->fields[$name]['type'] = 'checkbox';
         $this->fields[$name]['options'] = $options;
+        return $this;
+
     }
 
     /**
@@ -70,6 +74,8 @@ class FormBuild
         $this->element = $name;
         $this->fields[$name]['type'] = 'color';
         $this->fields[$name]['options'] = $options;
+        return $this;
+
 
     }
 
@@ -215,6 +221,23 @@ class FormBuild
     {
         $this->element = $name;
         $this->fields[$name]['type'] = 'hidden';
+        $this->fields[$name]['options'] = $options;
+        return $this;
+
+    }
+
+
+    /**
+     *
+     * @param  string $name
+     * @param  array $options
+     * @return FormParser;
+     */
+
+    public function password($name, $options = array())
+    {
+        $this->element = $name;
+        $this->fields[$name]['type'] = 'password';
         $this->fields[$name]['options'] = $options;
         return $this;
 
