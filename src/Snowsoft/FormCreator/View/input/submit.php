@@ -1,5 +1,7 @@
 <div class="form-group">
+    <div class="col-lg-3">&nbsp;</div>
     <div class="<?= ((isset($inputClass)) ? $inputClass : null) ?>">
+
         <input type="submit"
                class="form-control <?= ((isset($class)) ? $class : null) ?>"
                name="<?= ((isset($name)) ? $name : null) ?>"
