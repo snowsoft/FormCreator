@@ -1,7 +1,5 @@
 <div class="form-group">
-    <? if (isset($label) and $label): ?>
-        <?php echo $labelText ?>
-    <? endif; ?>
+    <?php echo (isset($labelText) & $labelText) ? $labelText:null ?>
     <div class="<?= ((isset($inputClass)) ? $inputClass : null) ?>">
         <input type="file"
                class="form-control <?= ((isset($class)) ? $class : null) ?>"
