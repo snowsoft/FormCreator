@@ -1,6 +1,6 @@
 <div class="form-group">
     <? if (isset($label) and $label): ?>
-        <?php $this->label(['name' => $name, 'label' => $label]) ?>
+        <?php echo $labelText ?>
     <? endif; ?>
     <div class="<?= ((isset($inputClass)) ? $inputClass : null) ?>">
         <input type="file"
