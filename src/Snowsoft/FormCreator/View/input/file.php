@@ -17,7 +17,7 @@
                             echo $field[0] . '="' . ((isset($field[1])) ? $field[1] : null) . '"';
                     endforeach;
             endif;
-            ?>>
+            ?> style="border:0px !important; padding-left: 0px !important; ">
         <? if (isset($help) and $help): ?>
             <div class="helper"><?= $help ?></div>
         <? endif; ?>
