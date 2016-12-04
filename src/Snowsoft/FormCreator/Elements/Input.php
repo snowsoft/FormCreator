@@ -22,7 +22,8 @@ class Input
         $options['inputClass'] = $this->inputClass;
         $options['name'] = $name;
         $options['type'] = 'text';
-        $options['labelText'] = $this->label($options);
+        if (isset($options['label']) and $options['label'])
+            $options['labelText'] = $this->label($options);
         return FormLoader::inc('input/text', $options);
     }
 
@@ -31,7 +32,8 @@ class Input
         $options['inputClass'] = $this->inputClass;
         $options['name'] = $name;
         $options['type'] = 'url';
-        $options['labelText'] = $this->label($options);
+        if (isset($options['label']) and $options['label'])
+            $options['labelText'] = $this->label($options);
         return FormLoader::inc('input/text', $options);
     }
 
@@ -40,7 +42,8 @@ class Input
         $options['inputClass'] = $this->inputClass;
         $options['name'] = $name;
         $options['type'] = 'date';
-        $options['labelText'] = $this->label($options);
+        if (isset($options['label']) and $options['label'])
+            $options['labelText'] = $this->label($options);
         return FormLoader::inc('input/date', $options);
     }
 
@@ -49,7 +52,8 @@ class Input
         $options['inputClass'] = $this->inputClass;
         $options['name'] = $name;
         $options['type'] = 'tel';
-        $options['labelText'] = $this->label($options);
+        if (isset($options['label']) and $options['label'])
+            $options['labelText'] = $this->label($options);
         return FormLoader::inc('input/text', $options);
     }
 
@@ -58,7 +62,8 @@ class Input
         $options['inputClass'] = $this->inputClass;
         $options['name'] = $name;
         $options['type'] = 'hidden';
-        $options['labelText'] = $this->label($options);
+        if (isset($options['label']) and $options['label'])
+            $options['labelText'] = $this->label($options);
         return FormLoader::inc('input/hidden', $options);
     }
 
@@ -67,7 +72,8 @@ class Input
         $options['inputClass'] = $this->inputClass;
         $options['name'] = $name;
         $options['type'] = 'time';
-        $options['labelText'] = $this->label($options);
+        if (isset($options['label']) and $options['label'])
+            $options['labelText'] = $this->label($options);
         return FormLoader::inc('input/date', $options);
     }
 
@@ -76,7 +82,8 @@ class Input
         $options['inputClass'] = $this->inputClass;
         $options['name'] = $name;
         $options['type'] = 'color';
-        $options['labelText'] = $this->label($options);
+        if (isset($options['label']) and $options['label'])
+            $options['labelText'] = $this->label($options);
         return FormLoader::inc('input/text', $options);
     }
 
@@ -85,7 +92,8 @@ class Input
         $options['inputClass'] = $this->inputClass;
         $options['name'] = $name;
         $options['type'] = 'datetime';
-        $options['labelText'] = $this->label($options);
+        if (isset($options['label']) and $options['label'])
+            $options['labelText'] = $this->label($options);
         return FormLoader::inc('input/date', $options);
     }
 
@@ -94,14 +102,15 @@ class Input
         $options['inputClass'] = $this->inputClass;
         $options['name'] = $name;
         $options['type'] = 'file';
-        $options['labelText'] = $this->label($options);
+        if (isset($options['label']) and $options['label'])
+            $options['labelText'] = $this->label($options);
         return FormLoader::inc('input/file', $options);
     }
 
 
     public function label($data)
     {
-        $data['class'] = $this->inputClass;
+        $data['labelClass'] = $this->labelClass;
         return FormLoader::inc('input/file', $data);
     }
 
