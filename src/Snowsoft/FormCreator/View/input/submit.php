@@ -1,3 +1,4 @@
+<br clear="all">
 <div class="form-group">
     <div class="col-lg-3">&nbsp;</div>
     <div class="<?= ((isset($inputClass)) ? $inputClass : null) ?>">
