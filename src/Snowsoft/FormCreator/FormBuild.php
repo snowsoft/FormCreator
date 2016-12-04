@@ -194,6 +194,23 @@ class FormBuild
      * @return FormParser;
      */
 
+    public function number($name, $options = array())
+    {
+        $this->element = $name;
+        $this->fields[$name]['type'] = 'number';
+        $this->fields[$name]['options'] = $options;
+        return $this;
+
+    }
+
+
+    /**
+     *
+     * @param  string $name
+     * @param  array $options
+     * @return FormParser;
+     */
+
     public function hidden($name, $options = array())
     {
         $this->element = $name;

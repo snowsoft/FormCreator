@@ -33,7 +33,7 @@ class Input
     {
         $options['name'] = $name;
         $options['type'] = 'date';
-        return FormLoader::inc('input/text', $options);
+        return FormLoader::inc('input/date', $options);
     }
 
     public function tel($name, $options)
@@ -54,7 +54,28 @@ class Input
     {
         $options['name'] = $name;
         $options['type'] = 'time';
+        return FormLoader::inc('input/date', $options);
+    }
+
+    public function color($name, $options)
+    {
+        $options['name'] = $name;
+        $options['type'] = 'color';
         return FormLoader::inc('input/text', $options);
+    }
+
+    public function datetime($name, $options)
+    {
+        $options['name'] = $name;
+        $options['type'] = 'datetime';
+        return FormLoader::inc('input/date', $options);
+    }
+
+    public function file($name, $options)
+    {
+        $options['name'] = $name;
+        $options['type'] = 'file';
+        return FormLoader::inc('input/file', $options);
     }
 
 }
