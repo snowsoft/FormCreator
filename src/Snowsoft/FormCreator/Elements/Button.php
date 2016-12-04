@@ -8,8 +8,16 @@
 
 namespace Snowsoft\FormCreator\Elements;
 
+use Snowsoft\FormCreator\FormLoader;
 
 class Button
 {
+
+    public function Submit($options)
+    {
+        $options['inputClass'] = 'col-lg-12';
+        $options['type'] = 'submit';
+        return FormLoader::inc('input/submit', $options);
+    }
 
 }

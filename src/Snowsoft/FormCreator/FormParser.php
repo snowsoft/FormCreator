@@ -8,6 +8,7 @@
 
 namespace Snowsoft\FormCreator;
 
+use Snowsoft\FormCreator\Elements\Button;
 use Snowsoft\FormCreator\Elements\FormElement;
 use Snowsoft\FormCreator\Elements\Input;
 
@@ -18,13 +19,14 @@ class FormParser
     public function __construct($form)
     {
 
-      echo  $this->parse($form);
+        echo $this->parse($form);
     }
 
 
     protected function parse($form)
     {
         $input = new Input();
+        $button = new Button();
         $formElement = new FormElement();
 
         $html = $formElement->FormOpen($form['formName'], $form['formRules']);
@@ -64,7 +66,7 @@ class FormParser
                             break;
 
 
-                            endswitch;
+                    endswitch;
 
 
                 endif;
@@ -73,12 +75,11 @@ class FormParser
             endforeach;
 
 
+        $html .= $button->Submit($form['formRules']);
         $html .= $formElement->formClose();
 
 
         return $html;
-
-
 
 
     }
